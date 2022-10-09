@@ -9216,16 +9216,6 @@ parcelRequire = (function (e, r, t, n) {
       },
       { './cjs/react-dom.production.min.js': 'i17t' },
     ],
-    NdAl: [
-      function (require, module, exports) {
-        'use strict'
-        var t,
-          e = require('react-dom')
-        ;(exports.createRoot = e.createRoot),
-          (exports.hydrateRoot = e.hydrateRoot)
-      },
-      { 'react-dom': 'NKHc' },
-    ],
     vKFU: [function (require, module, exports) {}, {}],
     GTOe: [
       function (require, module, exports) {
@@ -9391,8 +9381,8 @@ parcelRequire = (function (e, r, t, n) {
         require('./App.css')
         var r = require('./data/allApps'),
           t = v(require('./assets/icons/campminderIcon.svg')),
-          n = v(require('./assets/icons/slackIcon.svg')),
-          a = v(require('./assets/icons/googleSheetsIcon.svg')),
+          a = v(require('./assets/icons/slackIcon.svg')),
+          n = v(require('./assets/icons/googleSheetsIcon.svg')),
           i = v(require('./assets/icons/googleFormsIcon.svg')),
           o = v(require('./assets/icons/hubspotIcon.svg')),
           c = v(require('./assets/icons/mailchimpIcon.svg')),
@@ -9419,13 +9409,13 @@ parcelRequire = (function (e, r, t, n) {
           var r = g(s)
           if (r && r.has(e)) return r.get(e)
           var t = {},
-            n = Object.defineProperty && Object.getOwnPropertyDescriptor
-          for (var a in e)
-            if ('default' !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-              var i = n ? Object.getOwnPropertyDescriptor(e, a) : null
+            a = Object.defineProperty && Object.getOwnPropertyDescriptor
+          for (var n in e)
+            if ('default' !== n && Object.prototype.hasOwnProperty.call(e, n)) {
+              var i = a ? Object.getOwnPropertyDescriptor(e, n) : null
               i && (i.get || i.set)
-                ? Object.defineProperty(t, a, i)
-                : (t[a] = e[a])
+                ? Object.defineProperty(t, n, i)
+                : (t[n] = e[n])
             }
           return (t.default = e), r && r.set(e, t), t
         }
@@ -9434,8 +9424,8 @@ parcelRequire = (function (e, r, t, n) {
               Object.assign ||
               function (e) {
                 for (var s, r = 1, t = arguments.length; r < t; r++)
-                  for (var n in (s = arguments[r]))
-                    Object.prototype.hasOwnProperty.call(s, n) && (e[n] = s[n])
+                  for (var a in (s = arguments[r]))
+                    Object.prototype.hasOwnProperty.call(s, a) && (e[a] = s[a])
                 return e
               }).apply(this, arguments)
           },
@@ -9443,8 +9433,8 @@ parcelRequire = (function (e, r, t, n) {
             return (
               (e.icon = [
                 t.default,
-                n.default,
                 a.default,
+                n.default,
                 i.default,
                 o.default,
                 c.default,
@@ -9458,8 +9448,8 @@ parcelRequire = (function (e, r, t, n) {
             )
           }),
           x = function (r) {
-            var t = r.id,
-              n = (0, s.useState)(
+            var t = r.appName,
+              a = (0, s.useState)(
                 j.find(function (e) {
                   return e.slug === t
                 })
@@ -9473,10 +9463,12 @@ parcelRequire = (function (e, r, t, n) {
                     'div',
                     h(
                       {
-                        className: 'appCard '.concat(n ? '' : 'shimmer'),
+                        className: 'appCard '.concat(
+                          0 !== t.length && a ? '' : 'shimmer'
+                        ),
                         style: {
                           backgroundColor: ''.concat(
-                            null == n ? void 0 : n.primaryColor
+                            null == a ? void 0 : a.primaryColor
                           ),
                         },
                       },
@@ -9494,7 +9486,7 @@ parcelRequire = (function (e, r, t, n) {
                                       { className: 'whiteBackground' },
                                       {
                                         children: (0, e.jsx)('img', {
-                                          src: null == n ? void 0 : n.icon,
+                                          src: null == a ? void 0 : a.icon,
                                           className: 'icon',
                                           alt: '',
                                         }),
@@ -9513,7 +9505,7 @@ parcelRequire = (function (e, r, t, n) {
                                               { className: 'titleText' },
                                               {
                                                 children:
-                                                  null == n ? void 0 : n.name,
+                                                  null == a ? void 0 : a.name,
                                               }
                                             )
                                           ),
@@ -9545,7 +9537,7 @@ parcelRequire = (function (e, r, t, n) {
                               { className: 'right' },
                               {
                                 children:
-                                  n &&
+                                  a &&
                                   (0, e.jsxs)(
                                     'button',
                                     h(
@@ -9556,7 +9548,7 @@ parcelRequire = (function (e, r, t, n) {
                                       {
                                         children: [
                                           'Integrate with ',
-                                          null == n ? void 0 : n.name,
+                                          null == a ? void 0 : a.name,
                                         ],
                                       }
                                     )
@@ -9593,7 +9585,7 @@ parcelRequire = (function (e, r, t, n) {
         './assets/icons/shopifyIcon.svg': 'ZVlk',
       },
     ],
-    ovxy: [
+    HOzg: [
       function (require, module, exports) {
         var t = null
         function e() {
@@ -9622,7 +9614,7 @@ parcelRequire = (function (e, r, t, n) {
       },
       {},
     ],
-    jUzB: [
+    ATn5: [
       function (require, module, exports) {
         var r = require('./bundle-url').getBundleURL
         function e(r) {
@@ -9688,7 +9680,7 @@ parcelRequire = (function (e, r, t, n) {
             )
           })
       },
-      { './bundle-url': 'ovxy' },
+      { './bundle-url': 'HOzg' },
     ],
     vc0k: [
       function (require, module, exports) {
@@ -9713,7 +9705,7 @@ parcelRequire = (function (e, r, t, n) {
         exports.default = t
       },
       {
-        _bundle_loader: 'jUzB',
+        _bundle_loader: 'ATn5',
         'web-vitals': [['web-vitals.84a21b34.js', 'f6pS'], 'f6pS'],
       },
     ],
@@ -9721,32 +9713,35 @@ parcelRequire = (function (e, r, t, n) {
       function (require, module, exports) {
         'use strict'
         var e = require('react/jsx-runtime'),
-          r = a(require('react')),
-          t = a(require('react-dom/client'))
+          r = i(require('react')),
+          t = i(require('react-dom'))
         require('./index.css')
-        var i = a(require('./App')),
-          u = a(require('./reportWebVitals'))
-        function a(e) {
+        var u = i(require('./App')),
+          a = i(require('./reportWebVitals'))
+        function i(e) {
           return e && e.__esModule ? e : { default: e }
         }
-        var d = t.default.createRoot(document.getElementById('app-integration'))
-        d.render(
+        var d = document.getElementById('app-integration')
+        t.default.render(
           (0, e.jsx)(r.default.StrictMode, {
-            children: (0, e.jsx)(i.default, { id: 'google-sheets' }),
-          })
+            children: (0, e.jsx)(u.default, {
+              appName: (null == d ? void 0 : d.getAttribute('data-slug')) || '',
+            }),
+          }),
+          d
         ),
-          (0, u.default)()
+          (0, a.default)()
       },
       {
         'react/jsx-runtime': 'plwR',
         react: 'n8MK',
-        'react-dom/client': 'NdAl',
+        'react-dom': 'NKHc',
         './index.css': 'vKFU',
         './App': 'NHn6',
         './reportWebVitals': 'vc0k',
       },
     ],
-    Akvk: [
+    m3eM: [
       function (require, module, exports) {
         module.exports = function (n) {
           return new Promise(function (e, o) {
@@ -9769,8 +9764,8 @@ parcelRequire = (function (e, r, t, n) {
     ],
     0: [
       function (require, module, exports) {
-        var b = require('jUzB')
-        b.register('js', require('Akvk'))
+        var b = require('ATn5')
+        b.register('js', require('m3eM'))
       },
       {},
     ],
